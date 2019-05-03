@@ -1,0 +1,34 @@
+*,
+*:after,
+*:before{
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Proxima Nova", sans-serif;
+  color: black;
+  font-size: 16px;
+  margin: 0;
+}
+
+.content-wrapper{
+  max-width: 1400px;
+  padding-left: 115px;
+  padding-right: 115px;
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.banner-list{
+  list-style: none;
+}
+
+.banner-list .banner{
+  display: inline-block;
+  width: 565px;
+  height: 300px;
+  background: yellow;
+}
