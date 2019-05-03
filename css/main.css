@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  src: url("./fonts/ProximaNova-Regular.woff") format("woff"), url("./fonts/ProximaNova-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 500;
+  src: url("./fonts/ProximaNova-Semibold.woff") format("woff"), url("./fonts/ProximaNova-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  src: url("./fonts/ProximaNova-Bold.woff") format("woff"), url("./fonts/ProximaNova-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Umnik";
+  font-weight: 400;
+  src: url("./fonts/umnik-regular.woff") format("woff"), url("./fonts/umnik-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Umnik";
+  font-weight: 600;
+  src: url("../fonts/umnik-bold.woff") format("woff"), url("../fonts/umnik-bold.woff2") format("woff2");
+}
+
 *,
 *:after,
 *:before{
@@ -15,20 +45,132 @@ body{
   margin: 0;
 }
 
+a,
+a:link{
+  text-decoration: none;
+}
+
 .content-wrapper{
-  max-width: 1400px;
-  padding-left: 115px;
-  padding-right: 115px;
+  width: 1170px;
   outline: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+h2{
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .banner-list{
-  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .banner-list .banner{
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 565px;
-  height: 300px;
-  background: yellow;
+  height: 294px;
+  background-color: cyan;
+  margin-bottom: 21px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.product-img{
+  height: 100%;
+  display: inline-block;
+}
+
+.clickable-banner{
+  display: inline-block;
+}
+
+.banner .part-1{
+  width: 44%;
+  position: relative;
+}
+
+.part-1:after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-image: url("../img/gift.png");
+  width: 106px;
+  height: 119px;
+  right: 0;
+  top: 0;
+}
+
+.part-2{
+  width: 56%;
+}
+
+.banner .title{
+  font-size: 31px;
+  margin: 0;
+  padding: 0;
+  line-height: 36px;
+  display: block;
+}
+
+.banner p{
+  font-weight: 500;
+  display: block;
+}
+
+.timer-wrapper{
+  height: 85px;
+  background-color: silver;
+}
+
+.banner .price{
+  display: block;
+  color: #FF0072;
+}
+
+
+.more-btn,
+.more-btn:link{
+  font-family: "Proxima Nova";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #FF0072;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  bottom: 20px;
+  right: 26px;
+  position: absolute;
+}
+
+.more-btn:hover,
+.more-btn:link:hover{
+  background-color: #fe2d8a;
+}
+
+.more-btn:active,
+.more-btn:link:active{
+  background-color: #d80061;
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
 }
