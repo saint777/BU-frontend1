@@ -1,4 +1,4 @@
-# smartass mafia - banners template
+# smartass gang - banners template
 
 1) Clickable banners
 2) Responsive (320px to 1170px)
