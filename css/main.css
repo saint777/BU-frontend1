@@ -76,7 +76,7 @@ h2{
   display: flex;
   width: 565px;
   height: 294px;
-  background-color: cyan;
+  /* background-color: cyan; for test */
   margin-bottom: 21px;
   background-size: cover;
   background-repeat: no-repeat;
