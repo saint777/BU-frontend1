@@ -121,6 +121,8 @@
 @media only screen and (min-width: 1170px){
   .content-wrapper{
     width: 1170px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .banner-list .banner{
     width: 565px;
