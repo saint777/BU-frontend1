@@ -1,4 +1,4 @@
-# smartass gang - banners template
+# BU-frontend1 - banners template
 
 1) Clickable banners
 2) Responsive for mobile, tablet, desktop (320px to 1170px)
