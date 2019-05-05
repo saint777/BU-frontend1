@@ -1,0 +1,128 @@
+/* Responsive — Small screen*/
+
+@media only screen and (min-width: 320px) and (max-width: 595px){
+    .content-wrapper{
+      width: 100%;
+    }
+
+    .banner-list{
+      flex-direction: column;
+    }
+
+    .banner-list .banner{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+    }
+
+    .banner .more-btn{
+      margin-top: 10px;
+      display: inline-block;
+      font-size: 4vw;
+      width: 100%;
+      text-align: center;
+      position: static;
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .clickable-banner .more-btn{
+      position: absolute;
+      right: 4vw;
+      bottom: 4vw;
+      display: inline-block;
+      width: auto;
+    }
+
+    .banner-list .banner .product-img{
+      width: 100%;
+    }
+
+    .banner .part-1{
+      width: 45%;
+    }
+
+    .banner .part-2{
+      width: 50%;
+    }
+
+    .product-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .banner .title {
+      font-size: 4vw;
+      line-height: 5vw;
+    }
+
+    .banner .gift:after {
+      width: 50%;
+      height: 50%;
+      right: -10%;
+    }
+
+    .time-unit .unit {
+      font-size: 6vw;
+      margin: 0;
+      padding: 0;
+      line-height: 8vw;
+      letter-spacing: 2vw;
+    }
+
+    .time-unit .unit-name{
+      font-weight: 400;
+      margin-top: 4px;
+      font-size: 3.5vw;
+    }
+
+    .timer-wrapper{
+      height: auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .banner .price{
+      font-size: 8vw;
+    }
+
+    .banner .price-old{
+      font-size: 5vw;
+    }
+
+    .time-unit .unit::first-letter{
+      padding-left: 2vw;
+    }
+
+    .banner p {
+      font-size: 4vw;
+      line-height: 5vw;
+      font-weight: 400;
+      margin: 0;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+}
+
+/* Responsive — Medium */
+
+@media only screen and (min-width: 596px) and (max-width: 1169px){
+  .banner-list{
+    justify-content: center;
+  }
+}
+
+/* Responsive — Large, default */
+
+@media only screen and (min-width: 1170px){
+  .content-wrapper{
+    width: 1170px;
+  }
+  .banner-list .banner{
+    width: 565px;
+  }
+}

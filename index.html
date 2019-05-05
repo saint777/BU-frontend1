@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>BU Frontend-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
     <main class="content-wrapper">
@@ -12,24 +14,91 @@
     <div class="banner-list">
       <div class="banner" style="background-image: url(./img/banner1.jpg);">
         <div class="part-1 gift">
-          <img alt="тетрадь Кубометрия 3D" src="img/cubometry-1.jpg" class="product-img">
+          <a href="#"><img alt="тетрадь Кубометрия 3D" src="img/cubometry-1.png" class="product-img"></a>
         </div>
         <div class="part-2">
           <h3 class="title">Предзаказ тетради &laquo;Кубометрия 3D&raquo;</h3>
           <p>Акция заканчивается 14 апреля. Через:</p>
-          <div class="timer-wrapper">
+          <div class="timer-wrapper" id="timer1" data-expiry-date="2019-05-09T00:00:00">
+            <div class="time-unit">
+              <span class="unit hours">12</span>
+              <span class="unit-name">часов</span>
+            </div>
+            <div class="time-unit">
+              <span class="unit minutes">04</span>
+              <span class="unit-name">минут</span>
+            </div>
+            <div class="time-unit">
+              <span class="unit seconds">56</span>
+              <span class="unit-name">секунд</span>
+            </div>
           </div>
-          <span class="price">9 999</span>
-          <span class="price-old">12 290</span>
+          <span class="price">9 999 ₽</span>
+          <span class="price-old">12 290 Р</span>
         </div>
         <a href="#" class="more-btn">Подробнее</a>
       </div>
-      <a href="#" class="clickable-banner">
-        <div class="banner" style="background-image: url(./img/banner2.jpg);">
-          <span class="more-btn">Подробнее</span>
-        </div>
-      </a>
+      <div class="banner clickable-banner">
+        <a href="#">
+          <img alt="тетрадь Кубометрия 3D" src="img/banner2.jpg">
+        </a>
+        <a href="#" class="more-btn">Подробнее</a>
+      </div>
+      </div>
     </div>
     </main>
+    <script type="text/javascript">
+    function countdown(timerID) {
+      let days, hours, minutes, seconds;
+      let htmlHours, htmlMinutes, htmlSeconds;
+      let timer;
+
+      timer = document.getElementById(timerID);
+
+      htmlHours = timer.querySelector(".time-unit .unit.hours");
+      htmlMinutes= timer.querySelector(".time-unit .unit.minutes");
+      htmlSeconds = timer.querySelector(".time-unit .unit.seconds");
+
+      endDate = new Date(timer.dataset.expiryDate).getTime();
+
+      if (isNaN(endDate)) {
+        return;
+      }
+
+      calculate();
+      setInterval(calculate, 1000);
+
+      function calculate() {
+        let startDate = new Date();
+        startDate = startDate.getTime();
+
+        let timeRemaining = parseInt((endDate - startDate) / 1000);
+
+        if (timeRemaining >= 0) {
+          days = parseInt(timeRemaining / 86400);
+          timeRemaining = (timeRemaining % 86400);
+
+          hours = parseInt(timeRemaining / 3600);
+          timeRemaining = (timeRemaining % 3600);
+
+          minutes = parseInt(timeRemaining / 60);
+          timeRemaining = (timeRemaining % 60);
+
+          seconds = parseInt(timeRemaining);
+
+          //document.getElementById("test").innerHTML = parseInt(days, 10);
+          htmlHours.innerHTML = ("0" + hours).slice(-2);
+          htmlMinutes.innerHTML = ("0" + minutes).slice(-2);
+          htmlSeconds.innerHTML = ("0" + seconds).slice(-2);
+        } else {
+          return;
+        }
+      }
+    }
+
+    (function () {
+      countdown("timer1");
+    }());
+    </script>
   </body>
 </html>
